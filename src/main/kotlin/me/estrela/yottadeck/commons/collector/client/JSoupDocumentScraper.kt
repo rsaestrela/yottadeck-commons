@@ -5,13 +5,10 @@ import me.estrela.yottadeck.commons.collector.Scraper
 import me.estrela.yottadeck.commons.collector.exception.ScraperException
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 
 @Component
 class JSoupDocumentScraper : Scraper {
-
-    private val logger = LoggerFactory.getLogger(JSoupDocumentScraper::class.java)
 
     override fun scrap(url: String): Document {
         try {

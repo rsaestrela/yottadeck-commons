@@ -60,4 +60,9 @@ class Track : BaseModel() {
     @DBRef
     var trackResource: TrackResource? = null
 
+    override fun toString(): String {
+        return "Track(vendorId=$vendorId, artist=$artist, title=$title, genres=$genres, source=$source, label=$label, " +
+                "mediaType=$mediaType, preview=$preview, page=$page, side=$side, bpm=$bpm, recordTitle=$recordTitle, " +
+                "trackResource=$trackResource)"
+    }
 }
