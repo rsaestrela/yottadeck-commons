@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component
 @Component
 class JSoupNoMimeDocumentScraper : Scraper {
     override fun scrap(url: String): Document {
+        //todo
         return Document("")
     }
 }
