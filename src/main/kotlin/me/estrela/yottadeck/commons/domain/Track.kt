@@ -42,9 +42,6 @@ class Track : BaseModel() {
     @Field("mediaType")
     var mediaType: MediaType? = null
 
-    @Field("preview")
-    val preview: String? = null
-
     @Field("page")
     var page: String? = null
 
@@ -62,7 +59,7 @@ class Track : BaseModel() {
 
     override fun toString(): String {
         return "Track(vendorId=$vendorId, artist=$artist, title=$title, genres=$genres, source=$source, label=$label, " +
-                "mediaType=$mediaType, preview=$preview, page=$page, side=$side, bpm=$bpm, recordTitle=$recordTitle, " +
+                "mediaType=$mediaType, page=$page, side=$side, bpm=$bpm, recordTitle=$recordTitle, " +
                 "trackResource=$trackResource)"
     }
 }

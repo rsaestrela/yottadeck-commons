@@ -16,6 +16,9 @@ class TrackResource : BaseModel() {
     var previews: List<String> = ArrayList()
 
     @Field("resourceStatus")
-    var trackResourceStatus: String? = null
+    var resourceStatus: String? = null
+
+    @Field("position")
+    var position: Int = 0
 
 }
