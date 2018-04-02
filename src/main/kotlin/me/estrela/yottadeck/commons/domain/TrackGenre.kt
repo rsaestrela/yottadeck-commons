@@ -4,6 +4,7 @@ package me.estrela.yottadeck.commons.domain
 import java.util.*
 
 enum class TrackGenre constructor(vararg descriptions: String) {
+
     ACID("ACID"),
     HIP_HOP("HIP-HOP"),
     ELECTRO_POP("ELECTRO-POP"),
@@ -65,5 +66,17 @@ enum class TrackGenre constructor(vararg descriptions: String) {
     init {
         this.descriptions = Arrays.asList(*descriptions)
     }
+
+    companion object {
+        fun lookup(genreDescription: String): TrackGenre {
+            for (tg in TrackGenre.values()) {
+                if (tg.descriptions!!.contains(genreDescription.toUpperCase())) {
+                    return tg
+                }
+            }
+            return UNAVAILABLE
+        }
+    }
+
 }
 
