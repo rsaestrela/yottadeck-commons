@@ -15,8 +15,8 @@ class TrackResource : BaseModel() {
     @Field("preview")
     var previews: List<String> = ArrayList()
 
-    @Field("resourceStatus")
-    var resourceStatus: String? = null
+    @Field("status")
+    var status: String? = null
 
     @Field("position")
     var position: Int = 0
