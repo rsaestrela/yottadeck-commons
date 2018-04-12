@@ -12,7 +12,11 @@ class JSoupDocumentScraper : Scraper {
 
     override fun scrap(url: String): Document {
         try {
-            return Jsoup.connect(url).userAgent(userAgent).timeout(timeout).get()
+            return Jsoup.connect(url)
+                    .userAgent(userAgent)
+                    .validateTLSCertificates(false)
+                    .timeout(timeout)
+                    .get()
         } catch (e: Exception) {
             throw ScraperException("operation=apply msg='failed to get document url=$url ex=${e.message}")
         }
