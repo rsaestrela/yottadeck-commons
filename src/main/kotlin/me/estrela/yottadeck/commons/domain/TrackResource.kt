@@ -21,4 +21,8 @@ class TrackResource : BaseModel() {
     @Field("position")
     var position: Int = 0
 
+    override fun toString(): String {
+        return "TrackResource(previews=$previews, status=$status, position=$position)"
+    }
+
 }
