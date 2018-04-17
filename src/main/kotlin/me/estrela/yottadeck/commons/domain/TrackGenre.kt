@@ -17,7 +17,7 @@ enum class TrackGenre constructor(vararg descriptions: String) {
     FILTER_HOUSE("FILTER_HOUSE"),
     AFRO("AFRO"),
     AFRO_HOUSE("AFRO HOUSE"),
-    DEEP_HOUSE("DEEP HOUSE"),
+    DEEP_HOUSE("DEEP_HOUSE"),
     SOUL_FUNK_DISCO_HOUSE,
     DETROIT_HOUSE("DETROIT HOUSE"),
     DETROIT("DETROIT"),
