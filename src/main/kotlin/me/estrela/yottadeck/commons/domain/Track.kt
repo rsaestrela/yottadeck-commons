@@ -30,9 +30,11 @@ class Track : BaseModel() {
     var title: String? = null
 
     @Field("genres")
+    @Indexed
     var genres: Set<TrackGenre>? = null
 
     @Field("source")
+    @Indexed
     var source: String? = null
 
     @TextIndexed
